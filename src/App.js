@@ -7,8 +7,16 @@ export default class App extends Component {
     bio: "Hello world",
     imgSrc: "My Image",
     profession: "Sales Promoter",
+    count : 0,
     isShow:true
   };
+  // function handlePlus increment
+  handlePlus=()=>{
+    this.setState({count:this.state.count+1})
+  }
+  // function handleMinus increment
+  handleMinus=()=>{this.state.count > 0 && this.setState({count:this.state.count-1})}
+  
   // lifecyle components increment
   componentDidMount(){
     console.log("componentDidMount")
@@ -29,6 +37,12 @@ export default class App extends Component {
     console.log("render")
     return (
       <div className="App">
+        {/* count show - Button: plus & minus  */}
+        <h1>{this.state.count}</h1>
+        {/* Button: Plus */}
+        <button style={{marginRight:"5px"}} className='glow-on-hover btn' onClick={this.handlePlus} >+</button>
+        {/* Button: Minus */}
+        <button style={{marginLeft:"5px"}} className='glow-on-hover btn' onClick={this.handleMinus}>-</button>
         {/* fullName & button */}
         <h2 style={{marginTop:"70px"}}>{this.state.fullName}</h2>
         <button className='glow-on-hover'

@@ -26,7 +26,7 @@ padding: 0 25px;
 transition: all 200ms;
 } */
 body{
-  background-color: #838785;
+  background-color: #406cab;
 }
 .glow-on-hover {
   width: 220px;
@@ -91,7 +91,6 @@ button{
   font-size: 1.2em;
 
 }
-.App{
-  background-color: #65606b;
-  
+.btn{
+  width: 110px;
 }
